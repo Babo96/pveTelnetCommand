@@ -48,7 +48,7 @@ def pveVM(action, id):
             if r.status_code == 200:
                 return "success"
             else:
-                return "failure"
+                return "failure " + str(r.status_code)
         elif action in getOpts:
             r = requests.get(baseUrl + "/nodes/" + nodeId + "/qemu/" + nodemap[id] + "/status/" + action, verify=False, headers=headers)
             if r.status_code == 200:
