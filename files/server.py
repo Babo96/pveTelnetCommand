@@ -32,7 +32,7 @@ pveUrl = environ["PVE_URL"]
 baseUrl = pveUrl + '/api2/json'
 headers = {"Authorization": "PVEAPIToken=" + tokenId + "=" + secret}
 
-postOpts = ["start","stop","reset","reboot","shutdown"]
+postOpts = ["start","stop","reset","reboot","shutdown","resume","suspend"]
 getOpts = ["current"]
 
 nodemap = {}
