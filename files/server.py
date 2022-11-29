@@ -4,6 +4,7 @@ import socket
 import requests
 from json import dumps
 from os import environ
+from time import sleep
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -106,5 +107,5 @@ while True:
           message = message[:-2]
           lastmessage = message
           connection.send(b'\r' + lastmessage)
-        
         char = b''
+    sleep(0.05)  
